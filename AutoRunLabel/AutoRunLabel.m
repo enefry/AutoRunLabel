@@ -18,8 +18,8 @@
 -(void)setupView{
     // 10 像素/秒
     self.moveSpeech = 10.0f;
-    self.layer.borderColor = [[UIColor redColor]CGColor];
-    self.layer.borderWidth = 1.0f;
+//    self.layer.borderColor = [[UIColor redColor]CGColor];
+//    self.layer.borderWidth = 1.0f;
     [self setup];
 }
 
@@ -42,10 +42,11 @@
     _textSize = [self.text sizeWithFont:[super font] forWidth:NSIntegerMax lineBreakMode:NSLineBreakByClipping];
     if (_textSize.width>self.bounds.size.width) {
         if (_updateTimer) {
-            [_updateTimer invalidate];
-            _updateTimer = nil;
+            //已经有定时器了....
+//            [_updateTimer fire];
+        }else{
+            _updateTimer = [NSTimer scheduledTimerWithTimeInterval:1/30.0f target:self selector:@selector(nextFrame) userInfo:nil  repeats:YES];
         }
-        _updateTimer = [NSTimer scheduledTimerWithTimeInterval:1/30.0f target:self selector:@selector(nextFrame) userInfo:nil  repeats:YES];
     }else{
         [_updateTimer invalidate];
         _updateTimer = nil;

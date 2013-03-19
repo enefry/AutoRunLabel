@@ -398,6 +398,7 @@
 				FE94066B16F89FEF0090D6E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE94068E16F8A01E0090D6E3 /* Build configuration list for PBXNativeTarget "TestLabel" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +407,7 @@
 				FE94069016F8A01E0090D6E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
