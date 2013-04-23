@@ -16,10 +16,9 @@
 @implementation AutoRunLabel
 
 -(void)setupView{
-    // 10 像素/秒
+    // 10 px/s
     self.moveSpeech = 10.0f;
-//    self.layer.borderColor = [[UIColor redColor]CGColor];
-//    self.layer.borderWidth = 1.0f;
+    self.textGap = 1.5 * [super font].lineHeight ;
     [self setup];
 }
 
